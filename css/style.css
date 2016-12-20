@@ -18,11 +18,11 @@ body {
 
 .background {
     height: 100%;
-    left: 0vw;
+    transform: translateX(0vw);
     overflow-y: scroll;
     position: absolute;
     top: 0;
-    transition: left ease .5s;
+    transition: transform ease .5s;
     width: 400vw;
 }
 
@@ -72,6 +72,7 @@ nav label {
     width: calc(100%/3);
     font-size: 1em;
     line-height: 1em;
+    cursor: pointer;
 }
 
 nav label:hover {
@@ -93,7 +94,7 @@ input[type=radio] {
 }
 
 #teal:checked~.main .background {
-    left: 0;
+    transform: translateX(0);
 }
 
 #teal:checked~nav #lbl-teal {
@@ -107,7 +108,7 @@ input[type=radio] {
 }
 
 #tomato:checked~.main .background {
-    left: -100vw;
+    transform: translateX(-100vw);
 }
 
 #tomato:checked~nav #lbl-tomato {
@@ -121,7 +122,7 @@ input[type=radio] {
 }
 
 #yellow:checked~.main .background {
-    left: -200vw;
+    transform: translateX(-200vw);
 }
 
 #yellow:checked~nav #lbl-yellow {

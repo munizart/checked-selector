@@ -1,7 +1,6 @@
 .container {
     margin: 0 auto;
-    max-width: 1280px;
-    width: calc(100% - .5em);
+    width: 100%
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=*
@@ -41,51 +40,51 @@
  *=-=-=-=-=-=-=-=-=-=-=*/
 
 .col.s1 {
-    width: calc( ( 100% / ( 12 / 1)) - .5em);
+    width: calc( 100% / ( 12 / 1));
 }
 
 .col.s2 {
-    width: calc( ( 100% / ( 12 / 2)) - .5em);
+    width: calc( 100% / ( 12 / 2));
 }
 
 .col.s3 {
-    width: calc( ( 100% / ( 12 / 3)) - .5em);
+    width: calc( 100% / ( 12 / 3));
 }
 
 .col.s4 {
-    width: calc( ( 100% / ( 12 / 4)) - .5em);
+    width: calc( 100% / ( 12 / 4));
 }
 
 .col.s5 {
-    width: calc( ( 100% / ( 12 / 5)) - .5em);
+    width: calc( 100% / ( 12 / 5));
 }
 
 .col.s6 {
-    width: calc( ( 100% / ( 12 / 6)) - .5em);
+    width: calc( 100% / ( 12 / 6));
 }
 
 .col.s7 {
-    width: calc( ( 100% / ( 12 / 7)) - .5em);
+    width: calc( 100% / ( 12 / 7));
 }
 
 .col.s8 {
-    width: calc( ( 100% / ( 12 / 8)) - .5em);
+    width: calc( 100% / ( 12 / 8));
 }
 
 .col.s9 {
-    width: calc( ( 100% / ( 12 / 9)) - .5em);
+    width: calc( 100% / ( 12 / 9));
 }
 
 .col.s10 {
-    width: calc( ( 100% / ( 12 / 10)) - .5em);
+    width: calc( 100% / ( 12 / 10));
 }
 
 .col.s11 {
-    width: calc( ( 100% / ( 12 / 11)) - .5em);
+    width: calc( 100% / ( 12 / 11));
 }
 
 .col.s12 {
-    width: calc(100% - .5em);
+    width: 100%;
 }
 
 
@@ -95,40 +94,40 @@
 
 @media screen and (min-width: 601px) {
     .col.m1 {
-        width: calc( ( 100% / ( 12 / 1)) - .5em);
+        width: calc( 100% / ( 12 / 1));
     }
     .col.m2 {
-        width: calc( ( 100% / ( 12 / 2)) - .5em);
+        width: calc( 100% / ( 12 / 2));
     }
     .col.m3 {
-        width: calc( ( 100% / ( 12 / 3)) - .5em);
+        width: calc( 100% / ( 12 / 3));
     }
     .col.m4 {
-        width: calc( ( 100% / ( 12 / 4)) - .5em);
+        width: calc( 100% / ( 12 / 4));
     }
     .col.m5 {
-        width: calc( ( 100% / ( 12 / 5)) - .5em);
+        width: calc( 100% / ( 12 / 5));
     }
     .col.m6 {
-        width: calc( ( 100% / ( 12 / 6)) - .5em);
+        width: calc( 100% / ( 12 / 6));
     }
     .col.m7 {
-        width: calc( ( 100% / ( 12 / 7)) - .5em);
+        width: calc( 100% / ( 12 / 7));
     }
     .col.m8 {
-        width: calc( ( 100% / ( 12 / 8)) - .5em);
+        width: calc( 100% / ( 12 / 8));
     }
     .col.m9 {
-        width: calc( ( 100% / ( 12 / 9)) - .5em);
+        width: calc( 100% / ( 12 / 9));
     }
     .col.m10 {
-        width: calc( ( 100% / ( 12 / 10)) - .5em);
+        width: calc( 100% / ( 12 / 10));
     }
     .col.m11 {
-        width: calc( ( 100% / ( 12 / 11)) - .5em);
+        width: calc( 100% / ( 12 / 11));
     }
     .col.m12 {
-        width: calc(100% - .5em);
+        width: 100%
     }
     .container {
         width: 85%;
@@ -142,42 +141,39 @@
 
 @media screen and (min-width: 1001px) {
     .col.l1 {
-        width: calc( ( 100% / ( 12 / 1)) - .5em);
+        width: calc( 100% / ( 12 / 1));
     }
     .col.l2 {
-        width: calc( ( 100% / ( 12 / 2)) - .5em);
+        width: calc( 100% / ( 12 / 2));
     }
     .col.l3 {
-        width: calc( ( 100% / ( 12 / 3)) - .5em);
+        width: calc( 100% / ( 12 / 3));
     }
     .col.l4 {
-        width: calc( ( 100% / ( 12 / 4)) - .5em);
+        width: calc( 100% / ( 12 / 4));
     }
     .col.l5 {
-        width: calc( ( 100% / ( 12 / 5)) - .5em);
+        width: calc( 100% / ( 12 / 5));
     }
     .col.l6 {
-        width: calc( ( 100% / ( 12 / 6)) - .5em);
+        width: calc( 100% / ( 12 / 6));
     }
     .col.l7 {
-        width: calc( ( 100% / ( 12 / 7)) - .5em);
+        width: calc( 100% / ( 12 / 7));
     }
     .col.l8 {
-        width: calc( ( 100% / ( 12 / 8)) - .5em);
+        width: calc( 100% / ( 12 / 8));
     }
     .col.l9 {
-        width: calc( ( 100% / ( 12 / 9)) - .5em);
+        width: calc( 100% / ( 12 / 9));
     }
     .col.l10 {
-        width: calc( ( 100% / ( 12 / 10)) - .5em);
+        width: calc( 100% / ( 12 / 10));
     }
     .col.l11 {
-        width: calc( ( 100% / ( 12 / 11)) - .5em);
+        width: calc( 100% / ( 12 / 11));
     }
     .col.l12 {
-        width: calc(100% - .5em);
-    }
-    .container {
-        width: 75%;
+        width: 100%
     }
 }

@@ -1,6 +1,5 @@
 .container {
     margin: 0 auto;
-    max-width: 1280px;
     width: 100%
 }
 
@@ -176,8 +175,5 @@
     }
     .col.l12 {
         width: 100%
-    }
-    .container {
-        width: 75%;
     }
 }

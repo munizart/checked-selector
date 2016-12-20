@@ -72,6 +72,7 @@ nav label {
     width: calc(100%/3);
     font-size: 1em;
     line-height: 1em;
+    cursor: pointer;
 }
 
 nav label:hover {

@@ -82,6 +82,9 @@ nav hr {
     margin: 0;
     padding: 0;
     width: calc(100%/3);
+    transition: margin-left .3s ease-in, 
+    			background-color .5s ease .1s;
+
 }
 
 input[type=radio] {
@@ -100,7 +103,6 @@ input[type=radio] {
 #teal:checked~nav hr {
     background-color: #0EA08A;
     margin-left: 0;
-    transition: margin-left .3s ease-in, background-color .5s ease .1s;
 }
 
 #tomato:checked~.main .background {
@@ -114,7 +116,6 @@ input[type=radio] {
 #tomato:checked~nav hr {
     background-color: #F26A62;
     margin-left: calc(100%/3);
-    transition: margin-left .3s ease-in, background-color .5s ease .1s;
 }
 
 #yellow:checked~.main .background {
@@ -128,5 +129,4 @@ input[type=radio] {
 #yellow:checked~nav hr {
     background-color: #FFC819;
     margin-left: calc((100%/3)*2);
-    transition: margin-left .3s ease-in, background-color .5s ease .1s;
 }

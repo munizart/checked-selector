@@ -72,7 +72,7 @@ nav label {
 
 nav label:hover {
     background-color: rgba(0, 0, 0, .0625);
-    transition: background ease 1s;
+    transition: background ease-out 1s;
 }
 
 nav hr {
@@ -100,7 +100,7 @@ input[type=radio] {
 #teal:checked~nav hr {
     background-color: #0EA08A;
     margin-left: 0;
-    transition: all .3s ease;
+    transition: margin-left .3s ease-in, background-color .5s ease .1s;
 }
 
 #tomato:checked~.main .background {
@@ -114,7 +114,7 @@ input[type=radio] {
 #tomato:checked~nav hr {
     background-color: #F26A62;
     margin-left: calc(100%/3);
-    transition: all .3s ease;
+    transition: margin-left .3s ease-in, background-color .5s ease .1s;
 }
 
 #yellow:checked~.main .background {
@@ -128,5 +128,5 @@ input[type=radio] {
 #yellow:checked~nav hr {
     background-color: #FFC819;
     margin-left: calc((100%/3)*2);
-    transition: all .3s ease;
+    transition: margin-left .3s ease-in, background-color .5s ease .1s;
 }

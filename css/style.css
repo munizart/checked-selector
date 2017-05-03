@@ -1,3 +1,9 @@
+:root {
+    --yellow: #FFC819;
+    --tomato: #F26A62;
+    --teal: #0EA08A;
+    --selected: rgba(0, 0, 0, .0625);
+}
 :root, body {
     margin: 0;
     padding: 0;
@@ -13,10 +19,10 @@
 
 .background {
     height: 100%;
-    transform: translateX(0vw);
     overflow-y: scroll;
     position: absolute;
     top: 0;
+    transform: translateX( var(--offset) );
     transition: transform ease .5s;
     width: 400vw;
 }
@@ -33,15 +39,15 @@
 }
 
 .background #bg-teal {
-    background-color: #0EA08A;
+    background-color: var(--teal);
 }
 
 .background #bg-tomato {
-    background-color: #F26A62;
+    background-color: var(--tomato);
 }
 
 .background #bg-yellow {
-    background-color: #FFC819;
+    background-color: var(--yellow);
 }
 
 nav {
@@ -52,6 +58,7 @@ nav {
     position: absolute;
     top: 0;
     width: 100vw;
+    --color: transparent;
 }
 
 nav label {
@@ -68,22 +75,24 @@ nav label {
     font-size: 1em;
     line-height: 1em;
     cursor: pointer;
+    background-color: var(--label-color);
 }
 
 nav label:hover {
-    background-color: rgba(0, 0, 0, .0625);
+    background-color: var(--selected);
     transition: background ease-out 1s;
 }
 
 nav hr {
-    background-color: #0EA08A;
+    background-color: var(--hr-color);
     border: 0 none;
     height: 5px;
     margin: 0;
     padding: 0;
     width: calc(100%/3);
+    margin-left: var(--hr-margin);
     transition: margin-left .3s ease-in, 
-    			background-color .5s ease .1s;
+                background-color .5s ease .1s;
 
 }
 
@@ -92,41 +101,41 @@ input[type=radio] {
 }
 
 
-#teal:checked~.main .background {
-    transform: translateX(0);
+#teal:checked~.main {
+    --offset:  0;
 }
 
 #teal:checked~nav #lbl-teal {
-    background-color: rgba(0, 0, 0, .0625);
+    --label-color: var(--selected);
 }
 
-#teal:checked~nav hr {
-    background-color: #0EA08A;
-    margin-left: 0;
+#teal:checked~nav {
+    --hr-color: var(--teal);
+    --hr-margin: 0;
 }
 
-#tomato:checked~.main .background {
-    transform: translateX(-100vw);
+#tomato:checked~.main {
+    --offset: -100vw;
 }
 
 #tomato:checked~nav #lbl-tomato {
-    background-color: rgba(0, 0, 0, .0625);
+    --label-color: var(--selected);
 }
 
-#tomato:checked~nav hr {
-    background-color: #F26A62;
-    margin-left: calc(100%/3);
+#tomato:checked~nav {
+    --hr-color: var(--tomato);
+    --hr-margin: calc(100%/3);
 }
 
-#yellow:checked~.main .background {
-    transform: translateX(-200vw);
+#yellow:checked~.main {
+    --offset: -200vw;
 }
 
 #yellow:checked~nav #lbl-yellow {
-    background-color: rgba(0, 0, 0, .0625);
+    --label-color: var(--selected);
 }
 
-#yellow:checked~nav hr {
-    background-color: #FFC819;
-    margin-left: calc((100%/3)*2);
+#yellow:checked~nav {
+    --hr-color: var(--yellow);
+    --hr-margin: calc((100%/3)*2);
 }

@@ -1,10 +1,11 @@
 :root {
-    --yellow: #FFC819;
-    --tomato: #F26A62;
-    --teal: #0EA08A;
-    --selected: rgba(0, 0, 0, .0625);
+    --right-section-color: #FFC819;
+    --main-section-color: #F26A62;
+    --left-section-color: #0EA08A;
+    --selected-color: rgba(0, 0, 0, .0625);
 }
-:root, body {
+
+body {
     margin: 0;
     padding: 0;
 }
@@ -38,16 +39,16 @@
     width: 100vw;
 }
 
-.background #bg-teal {
-    background-color: var(--teal);
+.background #bg-left-section {
+    background-color: var(--left-section-color);
 }
 
-.background #bg-tomato {
-    background-color: var(--tomato);
+.background #bg-main-section {
+    background-color: var(--main-section-color);
 }
 
-.background #bg-yellow {
-    background-color: var(--yellow);
+.background #bg-right-section {
+    background-color: var(--right-section-color);
 }
 
 nav {
@@ -58,7 +59,7 @@ nav {
     position: absolute;
     top: 0;
     width: 100vw;
-    --color: transparent;
+    --label-bg-color: transparent;
 }
 
 nav label {
@@ -75,11 +76,11 @@ nav label {
     font-size: 1em;
     line-height: 1em;
     cursor: pointer;
-    background-color: var(--label-color);
+    background-color: var(--label-bg-color);
 }
 
 nav label:hover {
-    background-color: var(--selected);
+    background-color: var(--selected-color);
     transition: background ease-out 1s;
 }
 
@@ -96,46 +97,39 @@ nav hr {
 
 }
 
-input[type=radio] {
+input[type=radio][name="color"] {
     display: none;
 }
 
 
-#teal:checked~.main {
+#left:checked~.main {
     --offset:  0;
 }
 
-#teal:checked~nav #lbl-teal {
-    --label-color: var(--selected);
-}
 
-#teal:checked~nav {
-    --hr-color: var(--teal);
+#left:checked~nav {
+    --hr-color: var(--left-section-color);
     --hr-margin: 0;
 }
 
-#tomato:checked~.main {
+#main:checked~.main {
     --offset: -100vw;
 }
 
-#tomato:checked~nav #lbl-tomato {
-    --label-color: var(--selected);
-}
-
-#tomato:checked~nav {
-    --hr-color: var(--tomato);
+#main:checked~nav {
+    --hr-color: var(--main-section-color);
     --hr-margin: calc(100%/3);
 }
 
-#yellow:checked~.main {
+#right:checked~.main {
     --offset: -200vw;
 }
 
-#yellow:checked~nav #lbl-yellow {
-    --label-color: var(--selected);
+#right:checked~nav {
+    --hr-color: var(--right-section-color);
+    --hr-margin: calc((100%/3)*2);
 }
 
-#yellow:checked~nav {
-    --hr-color: var(--yellow);
-    --hr-margin: calc((100%/3)*2);
+#main:checked~nav #lbl-main-section, #left:checked~nav #lbl-left-section, #right:checked~nav #lbl-right-section{
+    --label-bg-color: var(--selected-color);
 }

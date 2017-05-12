@@ -1,6 +1,8 @@
 :root {
-    margin: 0;
-    padding: 0;
+    --right-section-color: #FFC819;
+    --main-section-color: #F26A62;
+    --left-section-color: #0EA08A;
+    --selected-color: rgba(0, 0, 0, .0625);
 }
 
 body {
@@ -18,10 +20,10 @@ body {
 
 .background {
     height: 100%;
-    transform: translateX(0vw);
     overflow-y: scroll;
     position: absolute;
     top: 0;
+    transform: translateX( var(--offset) );
     transition: transform ease .5s;
     width: 400vw;
 }
@@ -37,16 +39,16 @@ body {
     width: 100vw;
 }
 
-.background #bg-teal {
-    background-color: #0EA08A;
+.background #bg-left-section {
+    background-color: var(--left-section-color);
 }
 
-.background #bg-tomato {
-    background-color: #F26A62;
+.background #bg-main-section {
+    background-color: var(--main-section-color);
 }
 
-.background #bg-yellow {
-    background-color: #FFC819;
+.background #bg-right-section {
+    background-color: var(--right-section-color);
 }
 
 nav {
@@ -57,6 +59,7 @@ nav {
     position: absolute;
     top: 0;
     width: 100vw;
+    --label-bg-color: transparent;
 }
 
 nav label {
@@ -73,64 +76,60 @@ nav label {
     font-size: 1em;
     line-height: 1em;
     cursor: pointer;
+    background-color: var(--label-bg-color);
 }
 
 nav label:hover {
-    background-color: rgba(0, 0, 0, .0625);
-    transition: background ease 1s;
+    background-color: var(--selected-color);
+    transition: background ease-out 1s;
 }
 
 nav hr {
-    background-color: #0EA08A;
+    background-color: var(--hr-color);
     border: 0 none;
     height: 5px;
     margin: 0;
     padding: 0;
     width: calc(100%/3);
+    margin-left: var(--hr-margin);
+    transition: margin-left .3s ease-in, 
+                background-color .5s ease .1s;
+
 }
 
-input[type=radio] {
+input[type=radio][name="color"] {
     display: none;
 }
 
-#teal:checked~.main .background {
-    transform: translateX(0);
+
+#left:checked~.main {
+    --offset:  0;
 }
 
-#teal:checked~nav #lbl-teal {
-    background-color: rgba(0, 0, 0, .0625);
+
+#left:checked~nav {
+    --hr-color: var(--left-section-color);
+    --hr-margin: 0;
 }
 
-#teal:checked~nav hr {
-    background-color: #0EA08A;
-    margin-left: 0;
-    transition: all .3s ease;
+#main:checked~.main {
+    --offset: -100vw;
 }
 
-#tomato:checked~.main .background {
-    transform: translateX(-100vw);
+#main:checked~nav {
+    --hr-color: var(--main-section-color);
+    --hr-margin: calc(100%/3);
 }
 
-#tomato:checked~nav #lbl-tomato {
-    background-color: rgba(0, 0, 0, .0625);
+#right:checked~.main {
+    --offset: -200vw;
 }
 
-#tomato:checked~nav hr {
-    background-color: #F26A62;
-    margin-left: calc(100%/3);
-    transition: all .3s ease;
+#right:checked~nav {
+    --hr-color: var(--right-section-color);
+    --hr-margin: calc((100%/3)*2);
 }
 
-#yellow:checked~.main .background {
-    transform: translateX(-200vw);
-}
-
-#yellow:checked~nav #lbl-yellow {
-    background-color: rgba(0, 0, 0, .0625);
-}
-
-#yellow:checked~nav hr {
-    background-color: #FFC819;
-    margin-left: calc((100%/3)*2);
-    transition: all .3s ease;
+#main:checked~nav #lbl-main-section, #left:checked~nav #lbl-left-section, #right:checked~nav #lbl-right-section{
+    --label-bg-color: var(--selected-color);
 }
